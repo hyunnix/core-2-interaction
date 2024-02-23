@@ -15,10 +15,51 @@
             margin: 0;
             text-align: center;
             }
+
+        body {margin:0;}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        .active {
+            background-color: rgb(91, 105, 86);
+        }
     </style>
 </head>
     
 <body style="background-color:rgb(240, 244, 238);">
+    <ul>
+        <li><a class="active" href="homepage.html">Home</a></li>
+        <li><a href="chapter1.html">Chapter1</a></li>
+        <li><a href="chapter2.html">Chapter2</a></li>
+        <li><a href="chapter3.html">Chapter3</a></li>
+        <li><a href="chapter4.html">Chapter4</a></li>
+        <li><a href="chapter5.html">Chapter5</a></li>
+        <li><a href="chapter6.html">Chapter6</a></li>
+        <li><a href="chapter7.html">Chapter7</a></li>
+    </ul>
+
+    <br><br><br>
     <h2 style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">6. Personal Reflection:</h2>
     <hr>
     <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
@@ -53,16 +94,6 @@
             <button class="favorite styled" type="button">Next chapter</button>
         </a>
     </div>
-
-    <footer style="text-align: center; color: beige; font-family: Verdana, Geneva, Tahoma, sans-serif;">        
-        <a href="chapter1.html">chapter1</a>
-        <a href="chapter2.html">chapter2</a>
-        <a href="chapter3.html">chapter3</a>
-        <a href="chapter4.html">chapter4</a>
-        <a href="chapter5.html">chapter5</a>
-        <a href="chapter6.html">chapter6</a>
-        <a href="chapter7.html">chapter7</a>
-    </footer>
 
     <figure>
         <audio controls src="chapter6.mp3"></audio>

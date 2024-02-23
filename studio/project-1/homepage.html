@@ -4,22 +4,79 @@
     <title>
         In Praise of Shadows
     </title>
+
     <style>
-        figure {
-             margin: 0;
-            }
+*{ margin:0px; padding:0px;}
+ html 
+{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    font-weight:400; 
+    position:relative;  
+    height: 100%; 
+}
+
+body.index {
+    min-width: 400px;
+    min-height: 100%;
+}
+a{ text-decoration:none; color:inherit; }
+ul,li{ list-style:none; } 
+img{ max-width:100%; vertical-align:middle; }
+.index .txt 
+{
+    position:absolute; 
+    left:0%; 
+    width:60%; 
+    text-align:center; 
+    top:45%; 
+    font-size: 30px;  
+    right:0px; 
+    margin:0 auto; 
+    line-height: 148px; 
+    min-width:1150px;   
+    color:beige;
+}
+
+.index .txt .opa 
+{
+    opacity: 0;    
+    transform: translateZ(0);
+    transition: opacity  4.58s ease; 
+} 
+
+figure {
+     margin: 0;
+     align-content: center;
+    }
+
     </style>
       
 </head>
 
 <body style="background-color:rgb(0, 0, 0);">
-
-    <nav></nav>
-
+    <br>
     <h1 style="text-align:center; color: beige; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >In Praise of Shadows</h1>
-    <hr>
     <br>
 
+
+
+    <div style="color: beige; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="opa" id="opa" >
+        <p>
+            "I possess no specialized knowledge of architecture,
+        </p>
+        <p>
+            but I understand that in the Gothic cathedral of the West,
+        </p>
+        <p>
+            the roof is thrust up and up so as to place its pinnacle as high in the heavens as possible
+        </p>
+        <p>
+            and that herein is thought to lie its special beauty."
+        </p>
+    </div>
+    
+    <br><br>
     <p style="text-align:center; color: beige; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
         "CLICK THE SCENE"
     </p>
@@ -31,9 +88,8 @@
 
     <br>
 
-
     <figure>
-        <audio style="text-align: center;" controls src="homepage.mp3"></audio>
+        <audio controls src="homepage.mp3"></audio>
     </figure>
 
 
