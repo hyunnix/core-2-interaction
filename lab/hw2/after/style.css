@@ -1,0 +1,69 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    text-align: center;
+    font-weight: 400;
+    background-color: rgb(240, 244, 238);
+    position: relative;
+    height: 100%;
+}
+
+body.index {
+    min-width: 400px;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* Specific Styles for .txt within .index */
+.index .txt {
+    position: absolute;
+    left: 0;
+    right: 0; /* Ensures center alignment */
+    width: 60%;
+    text-align: center;
+    top: 45%;
+    font-size: 30px;
+    margin: 0 auto;
+    line-height: 148px;
+    min-width: 1150px;
+    color: #09040a;
+}
+
+.index .txt a {
+    font-size: 30px;
+    padding: 10px 40px;
+    border: 1px solid #000;
+    border-radius: 60px;
+    line-height: inherit;
+    background-color: #ffffff;
+    color: #09040a;
+}
+
+.index .txt .opa {
+    opacity: 0;
+    transform: translateZ(0);
+    transition: opacity 4.58s ease;
+}
+
+figure {
+    margin: 0;
+    align-content: center;
+}

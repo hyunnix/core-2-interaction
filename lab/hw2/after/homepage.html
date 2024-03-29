@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>In Praise of Shadows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 400;
+            position: relative;
+            height: 100%;
+        }
+        body.index {
+            min-width: 400px;
+            min-height: 100%;
+            background-color: rgb(0, 0, 0);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, li {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        .index .txt {
+            position: absolute;
+            left: 0;
+            width: 60%;
+            text-align: center;
+            top: 45%;
+            font-size: 30px;
+            right: 0;
+            margin: 0 auto;
+            line-height: 148px;
+            min-width: 1150px;
+            color: beige;
+        }
+        .index .txt .opa, h1, .opa, p {
+            color: beige;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .index .txt .opa {
+            opacity: 0;
+            transform: translateZ(0);
+            transition: opacity 4.58s ease;
+        }
+        figure {
+            margin: 0;
+            align-content: center;
+        }
+    </style>
+</head>
+<body class="index">
+    <h1>In Praise of Shadows</h1>
+    <div class="opa" id="opa">
+        <p>"I possess no specialized knowledge of architecture,</p>
+        <p>but I understand that in the Gothic cathedral of the West,</p>
+        <p>the roof is thrust up and up so as to place its pinnacle as high in the heavens as possible</p>
+        <p>and that herein is thought to lie its special beauty."</p>
+    </div>
+    <p>"CLICK THE SCENE"</p>
+    <div style="text-align: center;">
+        <a href="chapter1.html">
+            <img src="frame.jpg" alt="frame" class="center">
+        </a>
+    </div>
+    <figure>
+        <audio controls src="homepage.mp3"></audio>
+    </figure>
+</body>
+</html>

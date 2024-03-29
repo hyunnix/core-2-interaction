@@ -1,0 +1,62 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>In Praise of Shadows</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="index">
+    <div class="txt">
+        <p style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="txt">
+            In Praise of Shadows
+        </p>
+
+        <script>
+            var text = "In Praise of Shadows";
+            var end = 1;
+
+            setInterval(changeText, 200);
+
+            function changeText() {
+                document.getElementById("txt").innerText = text.substring(0, end);
+                end++;
+
+                if (end > text.length)
+                    end = text.length;
+            }
+        </script>
+        <div style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="opa" id="opa" >
+            <p>
+                "I possess no specialized knowledge of architecture,
+            </p>
+            <p>
+                but I understand that in the Gothic cathedral of the West,
+            </p>
+            <p>
+                the roof is thrust up and up so as to place its pinnacle as high in the heavens as possible
+            </p>
+            <p>
+                and that herein is thought to lie its special beauty."
+            </p>
+            <a href="homepage.html">ENTER</a>
+        </div>
+    </div>
+    <script>
+        var lastscrolltop = 100;
+        window.addEventListener("scroll", function () {
+            var scorllTop = window.pageYoffset || document.documentElement.scrollTop;
+            if (scorllTop > lastscrolltop) {
+                document.getElementById("opa").style.opacity = "1";
+            }
+
+            lastscrolltop = scorllTop;
+
+        });
+    
+    
+    </script>
+    
+    <figure>
+        <audio style="text-align: center;" controls src="homepage.mp3"></audio>
+    </figure>
+</body>
+</html>
