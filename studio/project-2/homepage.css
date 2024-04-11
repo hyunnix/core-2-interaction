@@ -1,3 +1,11 @@
+.GFG {
+    background-color: white;
+    border: 2px solid black;
+    color: green;
+    padding: 5px, 10px; /* Corrected padding values */
+    cursor: pointer;
+}
+
 /* 设置整个页面的样式 */
 body {
     background-color: rgba(250, 246, 242, 0.5);
