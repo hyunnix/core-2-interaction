@@ -1,0 +1,47 @@
+/* 设置整个页面的样式 */
+body {
+    background-color: rgba(250, 246, 242, 0.5);
+    margin: 0; /* 移除默认边距 */
+    height: 100vh; /* 设置视口高度为100% */
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    overflow-y: hidden; /* 隐藏垂直滚动条 */
+    overflow-x: hidden; /* 隐藏水平滚动条 */
+    font-family: Arial, sans-serif;
+}
+
+/* 设置文本容器样式 */
+.text-container {
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    justify-content: center; /* 子元素垂直居中 */
+    align-items: center; /* 子元素水平居中 */
+    text-align: center; /* 文本水平居中 */
+    position: relative;
+}
+
+/* 设置单个文本行的样式 */
+.text-line {
+    white-space: nowrap; /* 禁止文本自动换行 */
+    font-size: 151px; /* 设置字体大小为151px */
+    margin: 10px 0; /* 设置上下边距，可根据需要调整 */
+    transition: transform 0.5s ease; /* 添加过渡效果 */
+}
+
+.circular--landscape{
+    display:inline-block;
+    position:relative;
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    border-radius:50%;
+}
+
+
+.image {
+    position: absolute;
+    bottom: 0;
+    width: 500px; /* 图片宽度 */
+    transition: transform 0.5s ease, clip-path 0.5s ease; /* 添加过渡效果 */
+}

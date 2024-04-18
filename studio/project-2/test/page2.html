@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>网页设计示例</title>
+
+    <link rel="stylesheet" href="CSS/style2.css">
+</head>
+<body>
+<img class="image" id="image1" src="image/tugende2.webp" style="left: 100px;bottom: -50%">
+<img class="image" id="image2" src="image/L&P-subway.webp" style="right: 100px;bottom: -150%">
+<img class="image" id="image3" src="image/37e16c_d453f3407f084367a78193152149e672~mv2.webp"
+     style="left: 100px;bottom: -250%">
+<img class="image" id="image4" src="image/port_061613_ipad7.webp" style="right: 100px;bottom: -350%">
+<div class="text-container">
+    <div class="text-line" id="text1">CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING CREATING</div>
+    <div class="text-line" id="text2"> CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE CHANGE</div>
+</div>
+<script>
+
+    window.onload = function () {
+        var elements = document.querySelectorAll('.element');
+        var i = 1;
+        var right = -624.48;
+        elements.forEach(function (element) {
+            var rightValue = right * i;
+            element.style.position = 'absolute';
+            element.style.bottom = '0';
+            element.style.right = rightValue + 'px';
+            i++;
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const elements = document.querySelectorAll('.text-line');
+        const container = document.querySelector('.text-container');
+        var text1 = document.getElementById('text1');
+        var text2 = document.getElementById('text2');
+        var image1 = document.getElementById('image1');
+        var image2 = document.getElementById('image2');
+        var image3 = document.getElementById('image3');
+        var image4 = document.getElementById('image4');
+
+
+        var accumulatedScroll = 0; // 用于累积滚动距离
+        window.addEventListener('wheel', function (e) {
+            const delta = e.deltaY || e.detail || e.wheelDelta; // 获取滚动方向
+            const scrollSpeed = 100; // 滚动速度
+            if (delta < 0)
+                accumulatedScroll += scrollSpeed// 更新累积滚动距离
+            else
+                accumulatedScroll -= scrollSpeed// 更新累积滚动距离
+            // 根据滚动方向移动文本
+            text1.style.transform = 'translateX(' + -accumulatedScroll / 2 + 'px)';
+            text2.style.transform = 'translateX(' + accumulatedScroll / 2 + 'px)';
+
+
+            // 根据滚动方向移动图片
+            image1.style.transform = 'translateY(' + accumulatedScroll / 2 + 'px)';
+            image2.style.transform = 'translateY(' + accumulatedScroll / 2 + 'px)';
+            image3.style.transform = 'translateY(' + accumulatedScroll / 2 + 'px)';
+            image4.style.transform = 'translateY(' + accumulatedScroll / 2 + 'px)';
+
+            // 根据滚动距离改变clip-path，实现逐步变成圆形
+            var clipValue = 100 + accumulatedScroll / 20;
+            if (clipValue < 30)
+                clipValue = 30
+            image1.style.clipPath = 'circle(' + clipValue + '% at 50% 50%)';
+
+
+
+            // 根据滚动距离改变clip-path，实现逐步变成圆形
+            clipValue = 200 + accumulatedScroll / 20;
+            if (clipValue < 30)
+                clipValue = 30
+            image2.style.clipPath = 'circle(' + clipValue + '% at 50% 50%)';
+
+
+
+            // 根据滚动距离改变clip-path，实现逐步变成圆形
+            clipValue = 300 + accumulatedScroll / 20;
+            if (clipValue < 30)
+                clipValue = 30
+            image3.style.clipPath = 'circle(' + clipValue + '% at 50% 50%)';
+
+
+
+            // 根据滚动距离改变clip-path，实现逐步变成圆形
+            clipValue = 400 + accumulatedScroll / 20;
+            if (clipValue < 30)
+                clipValue = 30
+            image4.style.clipPath = 'circle(' + clipValue + '% at 50% 50%)';
+        });
+    });
+
+</script>
+</body>
+</html>

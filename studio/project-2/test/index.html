@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>网页设计示例</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+<div class="header">Web Design</div>
+<div class="scrollable-container">
+    <img src="image/leaf.png" alt="图片描述" class="center-image">
+    <div class="element">
+
+        <div class="horizontalBroder" style="margin-bottom: 60px"></div>
+        <h1 style="margin-bottom: 50px">Land Without broders</h1>
+        <div class="horizontalBroder"></div>
+        <img src="image/Group%2010.webp" class="image">
+        <div class="rightBroder"></div>
+    </div>
+    <div class="element">
+        <div class="horizontalBroder" style="margin-bottom: 60px"></div>
+        <h1 style="margin-bottom: 50px">Sex toys</h1>
+        <div class="horizontalBroder"></div>
+        <img src="image/Group%2011.webp" class="image">
+        <div class="rightBroder"></div>
+    </div>
+    <div class="element">
+        <div class="horizontalBroder" style="margin-bottom: 60px"></div>
+        <h1 style="margin-bottom: 50px">GPT</h1>
+        <div class="horizontalBroder"></div>
+        <img src="image/Group%2013.webp" class="image">
+        <div class="rightBroder"></div>
+    </div>
+    <div class="element">
+        <div class="horizontalBroder" style="margin-bottom: 60px"></div>
+        <h1 style="margin-bottom: 50px">classic music</h1>
+        <div class="horizontalBroder"></div>
+        <img src="image/Group%2014.webp" class="image">
+    </div>
+</div>
+
+
+<script>
+
+    window.onload = function () {
+        var elements = document.querySelectorAll('.element');
+        var i = 1;
+        var right = -624.48;
+        elements.forEach(function (element) {
+            var rightValue = right * i;
+            element.style.position = 'absolute';
+            element.style.bottom = '0';
+            element.style.right = rightValue + 'px';
+            i++;
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const elements = document.querySelectorAll('.element');
+        const container = document.querySelector('.scrollable-container');
+        var centerImage = document.querySelector('.center-image');
+        var webdesign = document.querySelector('.header')
+
+        container.addEventListener('wheel', function (e) {
+            const delta = e.deltaY || e.detail || e.wheelDelta; // 获取滚动方向
+            const scrollSpeed = 500; // 滚动速度
+
+            elements.forEach(function (element) {
+                if (delta < 0) {
+                    // 向上滚动
+                    element.style.right = (parseFloat(getComputedStyle(element).right) - scrollSpeed) + 'px';
+                } else {
+                    // 向下滚动
+                    element.style.right = (parseFloat(getComputedStyle(element).right) + scrollSpeed) + 'px';
+                }
+            });
+
+            if (delta < 0) {
+                // 向上滚动
+                centerImage.style.top = (parseFloat(getComputedStyle(centerImage).top) + 200) + 'px';
+            } else {
+                // 向下滚动
+                centerImage.style.top = (parseFloat(getComputedStyle(centerImage).top) - 200) + 'px';
+            }
+
+            if ((parseFloat(getComputedStyle(webdesign).top)) !== 80 && delta < 0) {
+                var top = (parseFloat(getComputedStyle(webdesign).top) + 200)
+                if (top > 80)
+                    top = 80
+                webdesign.style.top = top + 'px';
+            } else if (parseFloat(getComputedStyle(centerImage).top) < -750 && delta > 0)
+                webdesign.style.top = (parseFloat(getComputedStyle(webdesign).top) - 200) + 'px';
+        });
+    });
+
+</script>
+</body>
+</html>
