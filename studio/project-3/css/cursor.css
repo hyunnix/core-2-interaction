@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.Cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fff;
+  transform-origin: center center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  filter: url("#goo");
+  /* mix-blend-mode: difference; */
+}
+
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fff;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
