@@ -44,10 +44,43 @@
         width: 200px;
         height: auto;
       }
+
+      @keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: block;
+  width: 100%; /* Ensures the marquee spans the full width of the container */
+  white-space: nowrap;
+  overflow: hidden;
+  background: #020730;
+  color: #e2e4d3;
+}
+
+.marquee p {
+  display: inline-block;
+  min-width: 100%; /* Ensures the text covers the full width of the marquee */
+  animation: scroll-left 120s linear infinite;
+}
+
+
+
+
+
+
     </style>
   </head>
   <body>
-    <marquee>NYC Parks Drinking Fountains</marquee>
+    <div class="marquee">
+      <p style="font-family: Chalkduster;">NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains NYC Parks Drinking Fountains</p>
+    </div>
+    
     <div id="cursor" class="Cursor" style="background-color: #020730"></div>
     
     <div id="container">
