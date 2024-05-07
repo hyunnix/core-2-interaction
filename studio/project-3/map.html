@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYC Parks Drinking Fountains Map</title>
+    <link rel="stylesheet" href="./css/cursor.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* CSS for scrolling animation */
+      .scrolling-text {
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 80px;
+        line-height: 160px;
+        font-family: Chalkduster;
+      }
+
+      .scrolling-text h1 {
+        animation: scroll 20s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .content {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+
+      .introduce {
+        height: 80vh;
+        padding: 10px;
+        font-family: Chalkduster;
+      }
+
+      .atlas {
+        position: fixed;
+        left: 100px;
+        top: 150px;
+        height: 100vh;
+        width: 400px; 
+        z-index: 100; 
+      }
+
+      ul {
+        margin-top: 200px;
+        font-size: 20px;
+        width: 600px;
+      }
+
+      a{
+        text-decoration: none;
+        color:#1771b7;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="cursor" class="Cursor" style="background-color: #e2e4d3"></div>
+    <!-- 标题 -->
+    <div class="scrolling-text">
+      <h1>
+        Bronx * Bronx * Bronx * Bronx * Bronx * Bronx
+      </h1>
+    </div>
+    <!-- 地图 -->
+    <div class="div">
+      <div id="visualization-embed" class="atlas">
+        <script
+          type="text/javascript"
+          charset="UTF-8"
+          data-locale="en"
+          data-socrata-domain="data.cityofnewyork.us"
+          src="https://data.cityofnewyork.us/component/visualization/v1/socrata-visualizations-loader.js"
+        ></script>
+        <a
+          class="socrata-visualization-embed"
+          data-embed-version="1"
+          data-height="500"
+          data-socrata-domain="data.cityofnewyork.us"
+          data-vizcan-uid="622h-mkfu"
+          data-vif='{"configuration":{"viewSourceDataLink":true,"mapCenterAndZoom":{"center":{"lng":-73.97130461304903,"lat":40.70509634682327},"zoom":14.946576335340303},"basemapOptions":{"navigationControl":true,"basemapStyle":"mapbox://styles/mapbox/basic-v9","geoCoderControl":true,"geoLocateControl":true},"mapPitchAndBearing":{"bearing":0,"pitch":0},"datasetMetadata":false,"panAndZoom":true,"locateUser":false},"series":[{"unit":{"other":"Drinking Fountains","one":"Drinking Fountain"},"visible":true,"color":{"primary":"#eb6900"},"mapOptions":{"mapFlyoutTitleColumnName":"propertyna","mapType":"pointMap","additionalFlyoutColumns":["system"]},"showLegend":true,"type":"map","dataSource":{"measure":{"aggregationFunction":"count"},"name":"NYC Parks Drinking Fountains","type":"socrata.soql","datasetUid":"qnv7-p7a2","dimension":{"columnName":"the_geom","aggregationFunction":null},"filters":[]},"primary":true,"label":null}],"format":{"type":"visualization_interchange_format","version":4},"description":"","id":"2c6c30e3-e469-433d-b392-576e8b183773","title":"","currentMapLayerIndex":0}'
+          data-width="700"
+          href="https://data.cityofnewyork.us/Recreation/NYC-Parks-Drinking-Fountains/qnv7-p7a2?referrer=embed"
+          rel="external"
+          target="_blank"
+          >View the data</a
+        >
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- 介绍内容 -->
+      <div class="introduce">
+        <ul>
+          <li>M.S. 147 at 1600 Webster Avenue</li>
+          <li>Herbert H. Lehman HS at 3000 East Tremont Avenue</li>
+          <li>James Monroe H.S. at 1300 Boynton Avenue</li>
+          <li>William Taft HS at 240 East 172nd Street</li>
+          <li>Theodore Roosevelt H.S. at 500 East Fordham Road</li>
+          <li>Dewitt Clinton H.S. at 100 West Mosholu Parkway</li>
+          <li>
+            Ferry Point Park, comfort station on Schley Avenue and the LI Sound
+            between Westchester Creek and Balcom Avenue
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 标题 -->
+    <div class="scrolling-text">
+      <h1>
+        BrookIyn * BrookIyn * BrookIyn * BrookIyn * BrookIyn * BrookIyn
+      </h1>
+    </div>
+
+    <div class="content" style="height: 130vh">
+      <!-- 介绍内容 -->
+      <div class="introduce">
+        <ul>
+          <li>P.S. 33 at 70 Tompkins Avenue</li>
+          <li>M.S. 50 at 183 South 3rd Street</li>
+          <li>M.S. 71 at 215 Heyward Street</li>
+          <li>M.S. 320 at 46 McKeever Place</li>
+          <li>M.S. 390 at 1224 Park Place</li>
+          <li>M.S. 232 at 905 Winthrop Street</li>
+          <li>M.S. 117 at 300 Willoughby Avenue</li>
+          <li>M.S. 291 at 231 Palmetto Street</li>
+          <li>Boys and Girls H.S. at 1700 Fulton Street</li>
+          <li>Automotive H.S. at 50 Bedford Avenue</li>
+          <li>South Shore H.S. at 6565 Flatlands Avenue</li>
+          <li>Franklin K. Lane H.S. at 999 Jamaica Avenue</li>
+          <li>
+            Betsy Head Playground between Dumont Avenue and Thomas S. Boyland
+            Street
+          </li>
+          <li>
+            Cooper Park on Maspeth Avenue and Sharon Street, between Olive
+            Street and Morgan Avenue
+          </li>
+          <li>
+            Coffey Park on Verona Street, between Richard and Dwight Streets
+          </li>
+          <li>
+            Paerdegat Park on Albany Ave and 40th Street, between Farragut Road
+            and Foster Avenue
+          </li>
+          <li>St. Johns Recreation Center at 2151 Prospect Place</li>
+          <li>
+            Lindower Park at Strickland Avenue, between Miller Avenue and East
+            60th Place
+          </li>
+          <li>Fox Square on Fulton Street and Flatbush Avenue Extension</li>
+          <li>
+            Humboldt Plaza on Humboldt Street between Moore and Varet Streets
+          </li>
+          <li>
+            Knickerbocker Plaza on Myrtle Avenue, between Knickerbocker and
+            Greene Avenues
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 标题 -->
+    <div class="scrolling-text">
+      <h1>
+        Manhattan * Manhattan * Manhattan * Manhattan * Manhattan * Manhattan
+      </h1>
+    </div>
+    <div class="content">
+      <!-- 介绍内容 -->
+      <div class="introduce">
+        <ul>
+          <li>PS 188 at 442 E. Houston St.</li>
+          <li>MS 54 at 103 W. 107th St.</li>
+          <li>PS 149 at 34 W. 118th St.</li>
+          <li>PS 50 at 433 E. 100th St.</li>
+          <li>PS 123 at 301 W. 140th St.</li>
+          <li>George Washington HS at 549 Audubon Ave.</li>
+          <li>Dry Dock Playground at Szold Pl. between 10th St and Ave. D</li>
+          <li>The Battery Oval between State St. and Battery Pl.</li>
+          <li>
+            Plaza De Las Americas on 175th St. between Broadway and Wadsworth
+            Ave.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 标题 -->
+    <div class="scrolling-text">
+      <h1>
+        Queens * Queens * Queens * Queens * Queens * Queens
+      </h1>
+    </div>
+    <div class="content">
+      <!-- 介绍内容 -->
+      <div class="introduce">
+        <ul>
+          <li>Flushing HS at 35-01 Union St.</li>
+          <li>Martin Van Buren HS at 230-17 Hillside Ave.</li>
+          <li>August Martin HS at 156-10 Baisley Blvd.</li>
+          <li>Richmond Hill HS at 89-30 114th St.</li>
+          <li>John Adams HS at 101-01 Rockaway Blvd.</li>
+          <li>MS 8 at 108-35 167th St.</li>
+          <li>Ravenswood Library at 35-32 21st Street</li>
+          <li>
+            Little Bay Park parking lot on Cross Island Pkwy. between Utopia
+            Pkwy. and Totten Ave.
+          </li>
+          <li>Flushing Meadows Corona Park in Field One</li>
+          <li>
+            Rockaway Beach and Boardwalk: Roller Hockey Rink at Beach 109th St
+            and Shore Front Pkwy.
+          </li>
+          <li>
+            Rockaway Beach and Boardwalk: From Beach 3rd St. to Beach 153rd St.
+          </li>
+          <li>
+            Beach 20th Plaza on Beach 20th St. between Beach 21st St. and Mott
+            Ave Queens
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 标题 -->
+    <div class="scrolling-text">
+      <h1>
+        Staten Island * Staten Island * Staten Island * Staten Island * Staten Island * Staten Island
+      </h1>
+    </div>
+    <div class="content">
+      <!-- 介绍内容 -->
+      <div class="introduce">
+        <ul>
+          <li>Staten Island Museum Snug Harbor at 1000 Richmond Terr.</li>
+          <li>Ocean Breeze Athletic Complex at 599 Father Capodanno Blvd.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 标题 -->
+    <div class="scrolling-text">
+      <h1>
+        Water on the Go * Water on the Go * Water on the Go * Water on the Go * Water on the Go * Water on the Go
+      </h1>
+    </div>
+    <div class="content">
+      <!-- 介绍内容 -->
+      <div class="introduce">
+        <ul>
+          <p>During the summer months, the Department of Environmental Protection (DEP) provides portable Water-On-The-Go fountains in all five boroughs for drinking and filling up water bottles.</p>
+          
+          <a href="https://www.nyc.gov/site/dep/whats-new/water-on-the-go.page">Learn more about Water on the Go.</a>
+          <p>During the summer, you can view fountain locations and times on DEP's <a href="https://www.nyc.gov/site/dep/events/index.page">Events page.</a></p>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="./js/cursor.js"></script>
+  </body>
+</html>
