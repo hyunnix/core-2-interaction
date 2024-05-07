@@ -11,7 +11,7 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #62b9ff;
   transform-origin: center center;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #62b9ff;
   transform-origin: center center;
   transform: translate(-50%, -50%);
 }
