@@ -1,0 +1,15 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 50vh; /* 圆的直径为视口高度的一半 */
+  height: 50vh;
+  background-color: blue;
+  border-radius: 50%;
+}
